@@ -16,17 +16,34 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier":"com.footalent.financeapp"
+      "bundleIdentifier": "com.footalent.financeapp"
     },
     "android": {
-      "package":"com.footalent.financeapp",
+      "package": "com.footalent.financeapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+    }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "scheme": "myGrabielitenApp",
+    "extra": {
+      "eas": {
+        "projectId": "e2191eb5-840d-4b77-a815-cc8a4ac31751"
+      },
+    "plugins": {
+      "expo": {
+        "android": {
+          "googleServicesFile": "./google-services.json"
+        },
+        "ios": {
+          "googleServicesFile": "./GoogleService-Info.plist"
+        },
+        "plugins": ["@react-native-google-signin/google-signin"]
+      }
+    }
     }
   }
 }
