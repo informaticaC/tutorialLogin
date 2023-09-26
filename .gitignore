@@ -45,6 +45,9 @@ yarn-error.*
 # dependencies
 node_modules/
 
+# android build
+android/
+
 # Expo
 .expo/
 dist/
