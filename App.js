@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google'
 import axios, { AxiosHeaders } from 'axios';
@@ -33,7 +33,7 @@ export default function App() {
           .then((res) => setUser(res.data))          
           .catch((err)=> console.log(err));
   };
-  console.log(user);
+  //console.log(user);
 
   const ShowUserInfo = ({user})=>{
     console.log(user);
@@ -55,9 +55,9 @@ export default function App() {
       <>
         <Text style={{fontSize: 35, fontWeight: 'bold'}}>Welcome</Text>
         <Text style={{fontSize: 25, fontWeight: 'bold', marginBottom: 20, color: 'gray'}}>Please login</Text>
-        <TouchableOpacity disabled={!request} onPress={() => promptAsync()} >
+        <Pressable disabled={!request} onPress={() => promptAsync()} >
          <Image source={require("./btn.png")} style={{width: 300, height: 40}} />
-        </TouchableOpacity>
+        </Pressable>
       </>
       }
       <StatusBar style="auto" />
